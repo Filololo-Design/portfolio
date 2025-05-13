@@ -9,7 +9,15 @@ body {
 
 h1, h2, h3 {
   margin: 0.5em 0;
+ 
 }
+
+h1{
+     font-family: "salted", sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+
 
 a {
   color: inherit;
@@ -109,6 +117,12 @@ footer {
 .logo {
   font-weight: bold;
   font-size: 1.4rem;
+}
+
+.logo-img{
+  height: 100%;     /* makes logo fit within navbar height */
+  max-height: 40px; /* optional: prevents it from being too tall */
+  width: auto;      /* keeps aspect ratio */
 }
 
 .nav-links {
