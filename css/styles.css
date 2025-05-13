@@ -65,6 +65,14 @@ a {
   overflow: hidden;
   transition: transform 0.2s ease;
 }
+.project-card h2{  
+    font-family: "salted", sans-serif;
+font-weight: 400;
+font-style: normal;
+  margin: 1rem;
+
+
+}
 
 .project-card:hover {
   transform: scale(1.02);
