@@ -1,0 +1,171 @@
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
+a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Navbar */
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+}
+
+.nav-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.logo-img{
+  height: 100%;     /* makes logo fit within navbar height */
+  max-height: 40px; /* optional: prevents it from being too tall */
+  width: auto;      /* keeps aspect ratio */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links li a:hover {
+  color: #666;
+}
+
+.nav-links a.active {
+  color: #245501; /* change to your highlight color */
+  font-weight:bolder;
+}
+/* Hero Section */
+.hero {
+  background: url('hero-image.jpg') center/cover no-repeat;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+
+.hero p {
+  font-size: 1.5em;
+}
+
+/* Project Details */
+.project-details {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.details-grid h2 {
+  margin-bottom: 10px;
+}
+
+.details-grid ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+section h2 {
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+section p,
+section ul {
+  margin-bottom: 20px;
+  font-size: 1.1em;
+}
+
+/* Process Steps */
+.process-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.step {
+  flex: 1 1 200px;
+}
+
+.step img {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+/* Key Features */
+.key-features .feature {
+  margin-bottom: 40px;
+}
+
+.key-features .feature img {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer a {
+  color: #fff;
+  margin: 0 10px;
+}
