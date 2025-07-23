@@ -34,6 +34,26 @@ a {
   background: #f5f5f5;
   padding: 2rem;
 }
+<style>
+#hover-title span {
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: default;
+}
+
+#hover-title:hover span {
+  color: #000000; /* fallback */
+}
+
+/* Hover effect for each letter */
+#hover-title span:hover {
+  transform: scale(20);
+  color: #ec7c58; /* orange */
+}
+
+</style>
+
+
 
 .hero-text h1 {
   font-size: 2.5rem;

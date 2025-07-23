@@ -8,74 +8,126 @@
   <link rel="stylesheet" href="https://use.typekit.net/yum7utj.css">
   <link rel="stylesheet" href="https://use.typekit.net/yum7utj.css">
   <link href="images/filolo_logo2.png" rel="shortcut icon" type="image/x-icon"/>
-<link href="images/filolo_logo2.png"/>
+  <link href="images/filolo_logo2.png"/>
   
+  <style>
+    #loader {
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    #loader-logo {
+      width: 120px;
+      height: auto;
+      animation: spin 3s ease-in-out forwards;
+      opacity: 1;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); opacity: 1; }
+      90% { transform: rotate(360deg); opacity: 1; }
+      100% { transform: rotate(360deg); opacity: 0; }
+    }
+  </style>
 </head>
+
 <body>
-    <nav class="navbar">
-  <div class="nav-container">
-    <div class="logo">
-      <a href="index.html">
-  <img src="images/filolo_logo2.png" alt="Filomena Logo" class="logo-img" />
-</a>
-
-    </div>
-    <ul class="nav-links">
-      <li><a href="about.html">About</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="assets/filomena_delai_filololo_cv.pdf" target="_blank" rel="noopener">Resumé</a></li>
-    </ul>
+  <!-- 🔁 Loader -->
+  <div id="loader">
+    <img src="images/filolo_logo2.png" alt="Filololo Logo" id="loader-logo" />
   </div>
-</nav>
 
-  <header class="hero">
-    <div class="hero-text">
-      <h1>Bula & Noa'ia!</h1>
-      <h2>I'm Filololo a UX Designer based in Aotearoa. </h2>
-      <p>I thrive in collaborative spaces, design with purpose, and bring people together through thoughtful, human-centered experiences.</p>
-    </div>
-  </header>
-
-  <section class="projects">
-    <h2>My Work</h2>
-    <div class="project-grid">
-
-      <!-- THE LIVING ROOM CARD LINK -->
-      <a href="project_thelivingroom.html" style="text-decoration: none; color: inherit;">
-        <div class="project-card" style="cursor: pointer;">
-          <img src="images/thelivingroom3.png" alt="Project 1">
-          <h2>The Living Room: </h2>
-          <h3>A Future Co-Working Space Concept</h3>
-          <p>A biophilic co-working concept designed to reduce burnout and boost well-being for corporate workers, with profits supporting urban community gardens.</p>
+  <!-- 🌐 Main Content -->
+  <div id="main-content" style="display: none;">
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/filolo_logo2.png" alt="Filomena Logo" class="logo-img" />
+          </a>
         </div>
-      </a>
-
-      <!-- SUA CARD LINK -->
-      <a href="project_sua.html" style="text-decoration: none; color: inherit;">
-        <div class="project-card" style="cursor: pointer;">
-          <img src="images/sua.PNG" alt="Project 2">
-          <h2>SUA: </h2>
-          <h3>A Rotuman Language Learning Music App</h3>
-          <p>A culturally-rooted music platform that makes songs in the Rotuman Language more accesible for modern day learners of the language.</p>
-        </div>
-      </a>
-      
-      <!-- CHIP IN CARD LINK -->
-      <a href="project_chipin.html" style="text-decoration: none; color: inherit;">
-        <div class="project-card" style="cursor: pointer;">
-          <img src="images/chipin.png" alt="Project 3">
-          <h2>Chip-In: </h2>
-          <h3>A Group Savings App</h3>
-          <p>A money management app that makes it easy to save towards shared goals as a group —whether it's for a trip, a gift, or a night out. </p>
-        </div>
-</a>
+        <ul class="nav-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="assets/filomena_delai_2025_cv.pdf" target="_blank" rel="noopener">Resumé</a></li>
+        </ul>
+      </div>
+    </nav>
     
-      
-    </div>
-  </section>
 
-  <footer>
-    <p>© 2025 Filomena Delai • Designed with Loloma & Hanisi</p>
-  </footer>
+    <header class="hero">
+     
+      <div class="hero-text">
+        <h1 id="hover-title">
+          <span>B</span><span>u</span><span>l</span><span>a</span><span> </span><span>&</span><span> </span>
+          <span>N</span><span>o</span><span>a</span><span>'</span><span>i</span><span>a</span><span>!</span>
+        </h1>
+        
+        <h2>I'm Filololo a UX Designer based in Aotearoa. </h2>
+        <p>I thrive in collaborative spaces, design with purpose, and bring people together through thoughtful, human-centered experiences.</p>
+      </div>
+    </header>
+
+    <section class="projects">
+      <h2>My Work</h2>
+      <div class="project-grid">
+
+        <a href="project_thelivingroom.html" style="text-decoration: none; color: inherit;">
+          <div class="project-card" style="cursor: pointer;">
+            <img src="images/thelivingroom3.png" alt="Project 1">
+            <h2>The Living Room: </h2>
+            <h3>A Future Co-Working Space Concept</h3>
+            <p>A biophilic co-working concept designed to reduce burnout and boost well-being for corporate workers, with profits supporting urban community gardens.</p>
+          </div>
+        </a>
+
+        <a href="project_sua.html" style="text-decoration: none; color: inherit;">
+          <div class="project-card" style="cursor: pointer;">
+            <img src="images/sua.PNG" alt="Project 2">
+            <h2>SUA: </h2>
+            <h3>A Rotuman Language Learning Music App</h3>
+            <p>A culturally-rooted music platform that makes songs in the Rotuman Language more accesible for modern day learners of the language.</p>
+          </div>
+        </a>
+        
+        <a href="project_chipin.html" style="text-decoration: none; color: inherit;">
+          <div class="project-card" style="cursor: pointer;">
+            <img src="images/chipin.png" alt="Project 3">
+            <h2>Chip-In: </h2>
+            <h3>A Group Savings App</h3>
+            <p>A money management app that makes it easy to save towards shared goals as a group —whether it's for a trip, a gift, or a night out. </p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2025 Filomena Delai • Designed with Loloma & Hanisi</p>
+    </footer>
+  </div>
+
+  <!-- 🧠 Loader Script -->
+  <script>
+    window.addEventListener("load", function () {
+      const loader = document.getElementById("loader");
+      const main = document.getElementById("main-content");
+
+      setTimeout(() => {
+        loader.style.transition = "opacity 1s ease";
+        loader.style.opacity = "0";
+
+        setTimeout(() => {
+          loader.style.display = "none";
+          main.style.display = "block";
+        }, 1000);
+      }, 3000);
+    });
+  </script>
 </body>
 </html>
