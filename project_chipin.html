@@ -15,61 +15,96 @@
 <link href="images/filolo_logo2.png" rel="shortcut icon" type="image/x-icon"/>
 <link href="images/filolo_logo2.png"/>
 <style>
-    .navbar {
-      position: absolute;
-      top: 0;
-      width: 100%;
-      padding: 1.5rem 2rem;
-      display: flex;
-      justify-content: center;
-      z-index: 10;
-    }
-  
-    .nav-container {
-      width: 100%;
-      max-width: 1200px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-  
-    .logo {
-      font-weight: bold;
-      font-size: 1.4rem;
-    }
-  
-    .logo-img {
-  max-height: 40px;
-  width: auto;
-  height: auto; /* ✅ prevents full container stretching */
-  display: block; /* removes any inline spacing issues */
-}
+  .navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+  }
 
-  
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 2rem;
-      margin: 0;
+  .nav-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-weight: bold;
+    font-size: 1.4rem;
+  }
+
+  .logo-img {
+    height: 100%;
+    max-height: 40px;
+    width: auto;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+  }
+
+  .nav-links li a {
+    text-decoration: none;
+    color: #111;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+
+  .nav-links li a:hover {
+    color: #666;
+  }
+
+  .nav-links a.active {
+    color: #245501;
+    font-weight: bolder;
+  }
+
+  /* Responsive image section for full screen on mobile */
+  .full-width-images {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    width: 100vw;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .full-width-images img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+
+  @media screen and (min-width: 768px) {
+    .full-width-images {
+      grid-template-rows: 1fr 1fr 1fr;
     }
+  }
   
-    .nav-links li a {
-      text-decoration: none;
-      color: #111;
-      font-weight: 500;
-      transition: color 0.2s ease;
+    /* Responsive arrow orientation for timeline */
+  .arrow-icon {
+    width: 100%;
+    height: auto;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+  }
+
+  @media screen and (max-width: 767px) {
+    .arrow-icon {
+      transform: rotate(90deg);
     }
-  
-    .nav-links li a:hover {
-      color: #666;
-    }
-  
-    .nav-links a.active {
-      color: #245501;
-      font-weight: bolder;
-    }
-    
-  </style>
+  }
+</style>
 </head>
 
 
@@ -99,8 +134,8 @@
     <div class="project-header chip-in" style="background-color: #22391F; color: #D9D9D9;">
         <div class="project-header-content">
             <div class="project-header-title-wrapper">
-                <h2 class="project-title">Chip-In: <br>A Group Budgeting App </h2>
-                <div class="project-subtitle">A money management app that makes it easy to save towards shared goals as a group —whether it's for a trip, a gift, or a night out.</div>
+                <h2 class="project-title">Chip-In: <br>A Group Savings  App </h2>
+                <div class="project-subtitle">A money management app for young people to save towards goals together; staying social whilst financially responsible</div>
     
                 <div class="project-tag-list">
                     <div class="case-study-tag">Money Management</div>
@@ -175,12 +210,17 @@
 
             <!-- DESIGN CHALLENGE -->
             <div class="project-summary-section" >
-                <h1 class="heading h4">The challenge</h1>
-                <p>Group travel should bring people closer — but money often gets in the way. From one friend covering the bill to awkward repayment convos, the stress can sour even the best trips.
+                <h1 class="heading h4">The Problem</h1>
+                <p>Group travel should bring people closer but money often gets in the way. From one friend covering the bill to awkward repayment convos, the stress can sour even the best trips.
+
 <br><br>
-                    We know shared goals build connection — especially when everyone feels included and in control.
-<br><br>               
-                    Our challenge: how might we design a way for groups to save money together — making travel feel fair, fun, and friendship-first?</p>
+There are tools that exist that can help groups split costs but that is always after the fact.<br><br>                      We know shared goals build connection, especially when everyone feels included and in control.
+</p>          
+<br>
+<br>
+<h1 class="heading h4">The challenge</h1>
+
+                   <p> How might we design an app for a group of people to save money together — making travel feel fair, fun and friendship-first?</p>
             </div>
 
 
@@ -188,9 +228,11 @@
             <div class="project-summary-section">
                 <h1 class="heading h4">Our Solution</h1>
                 <ul role="list" class="solution_list">
-                    <li>A shared money management app for peers</li>
-                    <li>Aims to help users achieve their savings goals as a collective</li>
-                    <li>Reduces financial friction and strengthens friendships during group travel. </li>
+                  <li>A shared money management app that helps friends save together towards a common goal.</li>
+                  <li>Promotes smarter saving habits and financial responsibility.</li>
+
+  <li>Designed for fairness, transparency, and stronger friendships through collaborative planning.</li>
+
                 </ul>
             </div>
         </div>

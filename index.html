@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
   <title>Filololo Portfolio</title>
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="https://use.typekit.net/yum7utj.css">
@@ -11,6 +13,20 @@
   <link href="images/filolo_logo2.png"/>
   
   <style>
+    body, html {
+  overflow-x: hidden;
+}
+    /* GLOBAL FIXES */
+    * {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
     #loader {
       position: fixed;
       width: 100vw;
@@ -28,12 +44,92 @@
       animation: spin 3s ease-in-out forwards;
       opacity: 1;
     }
+    .navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+  }
+
+  .nav-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-weight: bold;
+    font-size: 1.4rem;
+  }
+
+  .logo-img {
+    height: 100%;
+    max-height: 40px;
+    width: auto;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+  }
+
+  .nav-links li a {
+    text-decoration: none;
+    color: #111;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+
+  .nav-links li a:hover {
+    color: #666;
+  }
+
+  .nav-links a.active {
+    color: #ec7c58;
+    font-weight: bolder;
+  }
+
+  .hero {
+    height: 100vh;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+    
+    #hover-title span {
+    display: inline-block;
+    transition: transform 0.2s ease;
+  }
+
+
+  #hover-title .word {
+  white-space: nowrap;
+  display: inline-block;
+}
+
+
+
+#hover-title span:hover {
+  transform: scale(1.3);
+}
+
+
 
     @keyframes spin {
       0% { transform: rotate(0deg); opacity: 1; }
       90% { transform: rotate(360deg); opacity: 1; }
       100% { transform: rotate(360deg); opacity: 0; }
     }
+    
   </style>
 </head>
 
@@ -64,12 +160,15 @@
     <header class="hero">
      
       <div class="hero-text">
-        <h1 id="hover-title">
-          <span>B</span><span>u</span><span>l</span><span>a</span><span> </span><span>&</span><span> </span>
-          <span>N</span><span>o</span><span>a</span><span>'</span><span>i</span><span>a</span><span>!</span>
+        <h1 id="hover-title" style="font-size: 80px; margin: 0;" style="line-height: 0.5; text-align: center;">
+          <span class="word"><span>B</span><span>u</span><span>l</span><span>a</span></span>
+          <span class="word"><span> </span><span>&</span></span>
+          <span class="word"><span> </span><span>N</span><span>o</span><span>a</span><span>'</span><span>i</span><span>a</span><span>!</span></span>
         </h1>
         
-        <h2>I'm Filololo a UX Designer based in Aotearoa. </h2>
+        
+        <h2>I'm Filololo a UX Designer based in Aotearoa, <br>
+          With a strong focus on UX Research </h2>
         <p>I thrive in collaborative spaces, design with purpose, and bring people together through thoughtful, human-centered experiences.</p>
       </div>
     </header>
@@ -80,10 +179,10 @@
 
         <a href="project_thelivingroom.html" style="text-decoration: none; color: inherit;">
           <div class="project-card" style="cursor: pointer;">
-            <img src="images/thelivingroom3.png" alt="Project 1">
+            <img src="images/thelivingroom.png" alt="Project 1">
             <h2>The Living Room: </h2>
-            <h3>A Future Co-Working Space Concept</h3>
-            <p>A biophilic co-working concept designed to reduce burnout and boost well-being for corporate workers, with profits supporting urban community gardens.</p>
+            <h3>A 'Futuristic Co-Working Space' Concept </h3>
+            <p>Reimagining the modern office by bringing the outdoors indoors for corporate workers</p>
           </div>
         </a>
 
@@ -91,8 +190,8 @@
           <div class="project-card" style="cursor: pointer;">
             <img src="images/sua.PNG" alt="Project 2">
             <h2>SUA: </h2>
-            <h3>A Rotuman Language Learning Music App</h3>
-            <p>A culturally-rooted music platform that makes songs in the Rotuman Language more accesible for modern day learners of the language.</p>
+            <h3>A Rotuman Language Learning - Music App</h3>
+            <p>A music platform making Rotuman Language more accessible for modern day language learners.</p>
           </div>
         </a>
         
@@ -100,8 +199,8 @@
           <div class="project-card" style="cursor: pointer;">
             <img src="images/chipin.png" alt="Project 3">
             <h2>Chip-In: </h2>
-            <h3>A Group Savings App</h3>
-            <p>A money management app that makes it easy to save towards shared goals as a group —whether it's for a trip, a gift, or a night out. </p>
+            <h3>A Money Management - Group Savings App</h3>
+            <p>An app for young people to save together; staying social without osing financial control.</p>
           </div>
         </a>
       </div>

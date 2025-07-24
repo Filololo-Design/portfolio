@@ -8,6 +8,123 @@
   <link rel="stylesheet" href="https://use.typekit.net/yum7utj.css">
   <link rel="stylesheet" href="https://use.typekit.net/yum7utj.css">
 </head>
+<style>
+    /* GLOBAL FIXES */
+    * {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+  .navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+  }
+
+  .nav-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-weight: bold;
+    font-size: 1.4rem;
+  }
+
+  .logo-img {
+    height: 100%;
+    max-height: 40px;
+    width: auto;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+  }
+
+  .nav-links li a {
+    text-decoration: none;
+    color: #111;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+
+  .nav-links li a:hover {
+    color: #666;
+  }
+
+  .nav-links a.active {
+    color: #ec7c58;
+    font-weight: bolder;
+  }
+
+  .projectshero {
+  padding-top: 100px; /* Adjust this as needed */
+}
+.hero-about-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+  .hero-about-container {
+    max-width: 100%;
+    min-width: auto;
+    aspect-ratio: auto;
+  }
+}
+
+.about-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.about-columns .column {
+  flex: 1 1 30%;
+  min-width: 250px;
+}
+
+@media screen and (max-width: 767px) {
+  .about-columns {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.project_section .project-content-wrap {
+  padding: 2rem;
+}
+
+@media screen and (max-width: 767px) {
+  .project-content-wrap h1 {
+    font-size: 20px !important;
+  }
+  .project-content-wrap .centered-email h1 {
+    font-size: 40px !important;
+    text-align: center;
+  }
+}
+</style>
 <body>
     <nav class="navbar">
   <div class="nav-container">
@@ -39,10 +156,10 @@
       <!-- THE LIVING ROOM CARD LINK -->
       <a href="project_thelivingroom.html" style="text-decoration: none; color: inherit;">
         <div class="project-card" style="cursor: pointer;">
-          <img src="images/thelivingroom3.png" alt="Project 1">
+          <img src="images/thelivingroom.png" alt="Project 1">
           <h2>The Living Room: </h2>
-          <h3>A Future Co-Working Space Concept</h3>
-          <p>A biophilic co-working concept designed to reduce burnout and boost well-being for corporate workers, with profits supporting urban community gardens.</p>
+          <h3>A 'Futuristic Co-Working Space' Concept</h3>
+          <p>Reimagining the modern office by bringing the outdoors indoors for corporate workers.</p>
         </div>
       </a>
 
@@ -51,8 +168,8 @@
         <div class="project-card" style="cursor: pointer;">
           <img src="images/sua.PNG" alt="Project 2">
           <h2>SUA: </h2>
-          <h3>A Rotuman Language Learning Music App</h3>
-          <p>A culturally-rooted music platform that makes songs in the Rotuman Language more accesible for modern day learners of the language.</p>
+          <h3>A Rotuman Language Learning - Music App</h3>
+          <p>A music platform making Rotuman Language more accesible for modern day language learners</p>
         </div>
       </a>
       
@@ -61,8 +178,9 @@
         <div class="project-card" style="cursor: pointer;">
           <img src="images/chipin.png" alt="Project 3">
           <h2>Chip-In: </h2>
-          <h3>A Group Savings App</h3>
-          <p>A money management app that makes it easy to save towards shared goals as a group —whether it's for a trip, a gift, or a night out. </p>
+          <h3>A Money Management - Group Savings App</h3>
+          <p>An app for young people to save together; staying social without losing financial control.</p>
+
         </div>
   </section>
 
